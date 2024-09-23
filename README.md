@@ -43,6 +43,7 @@ Use the arrow keys on your keyboard to slide tiles around.
   - Down Arrow: Move the empty space down.
   - Left Arrow: Move the empty space left.
   - Right Arrow: Move the empty space right.
+
 Continue moving the tiles until they are arranged in ascending order from 1 to 15, with the empty space in the bottom-right corner.
 
 ## Technologies Used
