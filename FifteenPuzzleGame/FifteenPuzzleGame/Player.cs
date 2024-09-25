@@ -24,7 +24,6 @@ namespace FifteenPuzzleGame
         {
             X = x;
             Y = y;
-            MoveCount = moveCount;
         }
     }
 }
