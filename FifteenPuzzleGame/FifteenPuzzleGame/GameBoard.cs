@@ -9,7 +9,7 @@ namespace FifteenPuzzleGame
     public class GameBoard
     {
         private static Random randNum = new Random();
-        private static List<int> numberPool = new List<int>() {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 , 13, 14, 15, 0 };
+        private static List<int> numberPool = new List<int>() {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 , 13, 14, 15, 0 }; // this needs uncoupled
 
         private int[,] _gameBoard;
 
