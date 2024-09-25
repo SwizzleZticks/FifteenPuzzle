@@ -9,6 +9,7 @@ A classic sliding puzzle game implemented as a C# console application.
 - [Installation](#installation)
 - [Usage](#usage)
 - [Technologies Used](#technologies-used)
+- [Future Implementations](#future-implementations)
 - [License](#license)
 
 ## Introduction
@@ -43,11 +44,17 @@ Use the arrow keys on your keyboard to slide tiles around.
   - Down Arrow: Move the empty space down.
   - Left Arrow: Move the empty space left.
   - Right Arrow: Move the empty space right.
+
 Continue moving the tiles until they are arranged in ascending order from 1 to 15, with the empty space in the bottom-right corner.
 
 ## Technologies Used
 - C#: The core language used for developing the game.
 - .NET 8.0: The framework for building and running the console application.
+
+## Future Implementations
+- User choice gameboard size
+- Moving to WPF, mobile, and web versions
+- Leaderboard, and personal stats
 
 ## License
 This project is licensed under the MIT License.
