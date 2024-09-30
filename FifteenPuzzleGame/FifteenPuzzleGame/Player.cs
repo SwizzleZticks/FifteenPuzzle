@@ -20,7 +20,7 @@ namespace FifteenPuzzleGame
 
         public int MoveCount { get; } = 0;
 
-        public Player(int x, int y, int moveCount)
+        public Player(int x, int y)
         {
             X = x;
             Y = y;
