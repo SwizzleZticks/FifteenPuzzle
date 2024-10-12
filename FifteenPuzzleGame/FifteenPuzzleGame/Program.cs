@@ -52,7 +52,7 @@
             Console.WriteLine(inversionCount);
             //end of inversion count
 
-            //locate the empty space (return type of (int,int))? deconstruct and set in the setter?
+            //use method and pass in which axis you wanna return the location for
             int x = -1;
             int y = -1;
 
