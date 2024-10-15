@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\jddic\\OneDrive\\Desktop\\workspace\\FifteenPuzzle\\FifteenPuzzleGame\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{47C453A5-7479-4FFB-B4A5-F23AB2A12E53}|FifteenPuzzleGame\\FifteenPuzzleGame.csproj|c:\\users\\jddic\\onedrive\\desktop\\workspace\\fifteenpuzzle\\fifteenpuzzlegame\\fifteenpuzzlegame\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47C453A5-7479-4FFB-B4A5-F23AB2A12E53}|FifteenPuzzleGame\\FifteenPuzzleGame.csproj|solutionrelative:fifteenpuzzlegame\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47C453A5-7479-4FFB-B4A5-F23AB2A12E53}|FifteenPuzzleGame\\FifteenPuzzleGame.csproj|c:\\users\\jddic\\onedrive\\desktop\\workspace\\fifteenpuzzle\\fifteenpuzzlegame\\fifteenpuzzlegame\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47C453A5-7479-4FFB-B4A5-F23AB2A12E53}|FifteenPuzzleGame\\FifteenPuzzleGame.csproj|solutionrelative:fifteenpuzzlegame\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{47C453A5-7479-4FFB-B4A5-F23AB2A12E53}|FifteenPuzzleGame\\FifteenPuzzleGame.csproj|c:\\users\\jddic\\onedrive\\desktop\\workspace\\fifteenpuzzle\\fifteenpuzzlegame\\fifteenpuzzlegame\\gameboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{47C453A5-7479-4FFB-B4A5-F23AB2A12E53}|FifteenPuzzleGame\\FifteenPuzzleGame.csproj|solutionrelative:fifteenpuzzlegame\\gameboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{47C453A5-7479-4FFB-B4A5-F23AB2A12E53}|FifteenPuzzleGame\\FifteenPuzzleGame.csproj|c:\\users\\jddic\\onedrive\\desktop\\workspace\\fifteenpuzzle\\fifteenpuzzlegame\\fifteenpuzzlegame\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{47C453A5-7479-4FFB-B4A5-F23AB2A12E53}|FifteenPuzzleGame\\FifteenPuzzleGame.csproj|solutionrelative:fifteenpuzzlegame\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{47C453A5-7479-4FFB-B4A5-F23AB2A12E53}|FifteenPuzzleGame\\FifteenPuzzleGame.csproj|c:\\users\\jddic\\onedrive\\desktop\\workspace\\fifteenpuzzle\\fifteenpuzzlegame\\fifteenpuzzlegame\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{47C453A5-7479-4FFB-B4A5-F23AB2A12E53}|FifteenPuzzleGame\\FifteenPuzzleGame.csproj|solutionrelative:fifteenpuzzlegame\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,47 +42,60 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "Game.cs",
+              "DocumentMoniker": "C:\\Users\\jddic\\OneDrive\\Desktop\\workspace\\FifteenPuzzle\\FifteenPuzzleGame\\FifteenPuzzleGame\\Game.cs",
+              "RelativeDocumentMoniker": "FifteenPuzzleGame\\Game.cs",
+              "ToolTip": "C:\\Users\\jddic\\OneDrive\\Desktop\\workspace\\FifteenPuzzle\\FifteenPuzzleGame\\FifteenPuzzleGame\\Game.cs",
+              "RelativeToolTip": "FifteenPuzzleGame\\Game.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBoAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-15T19:50:57.896Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "GameBoard.cs",
               "DocumentMoniker": "C:\\Users\\jddic\\OneDrive\\Desktop\\workspace\\FifteenPuzzle\\FifteenPuzzleGame\\FifteenPuzzleGame\\GameBoard.cs",
               "RelativeDocumentMoniker": "FifteenPuzzleGame\\GameBoard.cs",
               "ToolTip": "C:\\Users\\jddic\\OneDrive\\Desktop\\workspace\\FifteenPuzzle\\FifteenPuzzleGame\\FifteenPuzzleGame\\GameBoard.cs",
               "RelativeToolTip": "FifteenPuzzleGame\\GameBoard.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAIwDoAAABzAAAAAAAAAA==",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAAAAoAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-23T19:43:02.41Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\jddic\\OneDrive\\Desktop\\workspace\\FifteenPuzzle\\FifteenPuzzleGame\\FifteenPuzzleGame\\Player.cs",
               "RelativeDocumentMoniker": "FifteenPuzzleGame\\Player.cs",
               "ToolTip": "C:\\Users\\jddic\\OneDrive\\Desktop\\workspace\\FifteenPuzzle\\FifteenPuzzleGame\\FifteenPuzzleGame\\Player.cs",
               "RelativeToolTip": "FifteenPuzzleGame\\Player.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBkAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-23T19:39:35.773Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\jddic\\OneDrive\\Desktop\\workspace\\FifteenPuzzle\\FifteenPuzzleGame\\FifteenPuzzleGame\\Program.cs",
               "RelativeDocumentMoniker": "FifteenPuzzleGame\\Program.cs",
               "ToolTip": "C:\\Users\\jddic\\OneDrive\\Desktop\\workspace\\FifteenPuzzle\\FifteenPuzzleGame\\FifteenPuzzleGame\\Program.cs",
               "RelativeToolTip": "FifteenPuzzleGame\\Program.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAgwAgAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-23T19:25:13.687Z",
               "EditorCaption": ""
