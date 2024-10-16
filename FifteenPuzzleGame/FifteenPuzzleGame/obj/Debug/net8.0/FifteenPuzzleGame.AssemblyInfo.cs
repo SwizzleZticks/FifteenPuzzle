@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FifteenPuzzleGame")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cb1bf93c2f14c62560e440269f2066d4c9ced960")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dbc9637bd7630d770a39fed162afcab2d3b4922e")]
 [assembly: System.Reflection.AssemblyProductAttribute("FifteenPuzzleGame")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FifteenPuzzleGame")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
