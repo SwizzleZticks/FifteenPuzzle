@@ -25,7 +25,7 @@ namespace FifteenPuzzleGame
             get { return _moveCount; }
         }
 
-        public Player(int x, int y, GameBoard gameBoard)
+        public Player(GameBoard gameBoard)
         {
             _gameBoard = gameBoard;
             _x = GetAxisLocation("x");

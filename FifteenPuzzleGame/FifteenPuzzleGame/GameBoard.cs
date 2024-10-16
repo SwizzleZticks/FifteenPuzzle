@@ -3,6 +3,19 @@ namespace FifteenPuzzleGame
 {
     public class GameBoard
     {
+        /*                      -----Rules for solvable puzzle-----
+         * 1.If N is odd, then puzzle instance is solvable if number of inversions is even in the input state.
+         * 
+         * 2.  If N is even, puzzle instance is solvable if 
+         *     -the blank is on an even row counting from the bottom (second-last, fourth-last, etc.) 
+         *      and number of inversions is odd.
+         *   
+         *     -the blank is on an odd row counting from the bottom (last, third-last, fifth-last, etc.) 
+         *      and number of inversions is even.
+         * 
+         * 3. For all other cases, the puzzle instance is not solvable.
+         */
+
         private const int DEFAULT_BOARD_SIZE = 3;
 
         private List<int> _numberPool;
@@ -13,17 +26,7 @@ namespace FifteenPuzzleGame
         public int BoardSize 
         {
             get { return _boardSize; } 
-            set 
-            {
-                if (value >= 3)
-                {
-                    _boardSize = value;
-                }
-                else
-                {
-                    _boardSize = value >= 3 ? value : DEFAULT_BOARD_SIZE;
-                }
-            }
+            set { _boardSize = value >= 3 ? value : DEFAULT_BOARD_SIZE; }
         }
         public int[,] Board 
         {
@@ -35,23 +38,19 @@ namespace FifteenPuzzleGame
         {
             _randomNumber = new Random();
             _numberPool = new List<int>();
-            BoardSize = DEFAULT_BOARD_SIZE;
-            PopulateRandomNumberPool();
+            BoardSize = DEFAULT_BOARD_SIZE;          
             do
             {
+                PopulateRandomNumberPool(); //this is required since PopulateAndRemove empties the list
                 _board = new int[_boardSize, _boardSize];
-            } while (!IsSolvableBoard(_numberPool, _board, _randomNumber));
+            } while (!IsSolvableBoard());
         }
 
-        private bool IsSolvableBoard(List<int> numberPool, int[,] gameBoard, Random rndNum)
+        private bool IsSolvableBoard()
         {
-            // Initialize the game board with random values
-            InitializeValues(numberPool,gameBoard, rndNum);
-            // Flatten the 2D array for inversion checking
-            int[] flatBoard = Flatten2DArray(gameBoard);
-            // Check for even number of inversions
+            InitializeValues();
+            int[] flatBoard = Flatten2DArray(_board);
             bool isEvenInversion = IsEvenInversionCount(flatBoard);
-            // Check the row location of the blank space, counting from the bottom
             bool isEvenFromBottom = CheckRowLocation();
 
             return CheckSolvability(isEvenInversion, isEvenFromBottom);
@@ -121,22 +120,22 @@ namespace FifteenPuzzleGame
             return flatArr;
         }
 
-        private void InitializeValues(List<int> numberPool,int[,] gameBoard, Random rndNum)
+        private void InitializeValues()
         {
 
-            for (int i = 0; i < gameBoard.GetLength(0); i++)
+            for (int i = 0; i < _board.GetLength(0); i++)
             {
-                for (int j = 0; j < gameBoard.GetLength(1); j++)
+                for (int j = 0; j < _board.GetLength(1); j++)
                 {
-                    gameBoard[i,j] = PopulateAndRemove(numberPool, rndNum);
+                    _board[i,j] = PopulateAndRemove();
                 }
             }
         }
-        private int PopulateAndRemove(List<int> numberPool, Random rndNum)
+        private int PopulateAndRemove()
         {
-            int accessIndex = rndNum.Next(0,numberPool.Count);
-            int result = numberPool[accessIndex];
-            numberPool.RemoveAt(accessIndex);
+            int accessIndex = _randomNumber.Next(0,_numberPool.Count);
+            int result = _numberPool[accessIndex];
+            _numberPool.RemoveAt(accessIndex);
 
             return result;
         }
