@@ -40,8 +40,8 @@
 *.nuspec
 packages/
 # Uncomment if using .NET Core or .NET 5+
-# **/bin/
-# **/obj/
+**/bin/
+**/obj/
 
 # Resharper
 *.DotSettings.user
