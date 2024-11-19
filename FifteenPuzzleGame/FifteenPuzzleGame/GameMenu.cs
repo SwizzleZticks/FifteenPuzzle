@@ -6,39 +6,103 @@ namespace FifteenPuzzleGame
     public class GameMenu : IMenuNavigation
     {
         private ConsoleKeyInfo _keyPress;
-        private int _boardSize;
+        private string[] _menuOptions = [" > 8-Puzzle(Mini)", "15-Puzzle(Classic)", "24-Puzzle(Expanded)","35-Puzzle(Advanced)"];
 
-        public int BoardSize 
-        { 
-            get {  return _boardSize; }
-            set { _boardSize = value; }
+        public int GetGameSize()
+        {
+            int index;
+            int boardSize;
+
+            do
+            {
+                DisplayMenu();
+                _keyPress = Console.ReadKey();
+                index = GetUserSelection();
+
+                boardSize = index switch
+                {
+                    0 => 3,
+                    1 => 4,
+                    2 => 6,
+                    3 => 8,
+                    _ => 3
+                };
+               
+                Console.Clear();
+            } while (_keyPress.Key != ConsoleKey.Enter);
+
+            return boardSize;
         }
 
-        public GameMenu(int boardSize)
+        private int GetUserSelection()
         {
-            _boardSize = boardSize;
+            int index = -1;
+
+            switch (_keyPress.Key)
+            {
+                case ConsoleKey.UpArrow:
+                    {
+                        MoveUp();
+                        break;
+                    }
+                case ConsoleKey.DownArrow:
+                    {
+                        MoveDown();
+                        break;
+                    }
+                case ConsoleKey.Enter:
+                    {
+                        index = GetSelectIndex();
+                        break;
+                    }
+            }
+            return index;
+        }
+        private void DisplayMenu()
+        {
+            foreach (var menuOption in _menuOptions)
+            {
+                Console.WriteLine(menuOption);
+            }
         }
 
-        public GameMenu() { }
-
-        public void DisplayMenu()
+        public int GetSelectIndex()
         {
-
+            return Array.FindIndex(_menuOptions, s => s.Contains(">"));
         }
 
-        public void MoveUp(ConsoleKeyInfo keyPress)
+        public void MoveUp()
         {
-            throw new NotImplementedException();
+            int index = GetSelectIndex();
+
+            if(index != 0)
+            {
+                string alteredIndexText = _menuOptions[index].Remove(0,2);
+                _menuOptions[index] = alteredIndexText.TrimStart();
+
+                index--;
+
+                alteredIndexText = _menuOptions[index];
+                alteredIndexText = " > " + alteredIndexText;
+                _menuOptions[index] = alteredIndexText;             
+            }
         }
 
-        public void MoveDown(ConsoleKeyInfo keyPress)
+        public void MoveDown()
         {
-            throw new NotImplementedException();
-        }
+            int index = GetSelectIndex();
 
-        public void Select(ConsoleKeyInfo keyPress)
-        {
-            throw new NotImplementedException();
+            if (index != _menuOptions.Length - 1)
+            {
+                string alteredIndexText = _menuOptions[index].Remove(0, 2);
+                _menuOptions[index] = alteredIndexText.TrimStart();
+
+                index++;
+
+                alteredIndexText = _menuOptions[index];
+                alteredIndexText = " > " + alteredIndexText;
+                _menuOptions[index] = alteredIndexText;
+            }
         }
     }
 }
