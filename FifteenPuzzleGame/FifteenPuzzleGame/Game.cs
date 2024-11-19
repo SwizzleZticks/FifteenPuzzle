@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace FifteenPuzzleGame
 {
     public class Game
@@ -19,7 +14,7 @@ namespace FifteenPuzzleGame
         public Player Player
         { 
             get { return _player; } 
-            set {  Player = value; }
+            set { Player = value; }
         }
 
         public Game(GameBoard board, Player player)
