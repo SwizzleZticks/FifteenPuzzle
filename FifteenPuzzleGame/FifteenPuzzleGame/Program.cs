@@ -4,10 +4,12 @@
     {
         static void Main(string[] args)
         {
-            GameBoard board = new GameBoard();
             BoardRenderer boardRenderer = new BoardRenderer();
-
+            GameMenu menu = new GameMenu();
+            GameBoard board = new GameBoard(menu.GetGameSize());
+            
             boardRenderer.RenderBoard(board);
+
 
             Console.ReadLine();
         }
