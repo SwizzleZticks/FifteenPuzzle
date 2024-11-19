@@ -8,8 +8,8 @@ namespace FifteenPuzzleGame.Interfaces
 {
     public interface IMenuNavigation
     {
-        void MoveUp(ConsoleKeyInfo keyPress);
-        void MoveDown(ConsoleKeyInfo keyPress);
-        void Select(ConsoleKeyInfo keyPress);
+        void MoveUp();
+        void MoveDown();
+        int GetSelectIndex();
     }
 }
