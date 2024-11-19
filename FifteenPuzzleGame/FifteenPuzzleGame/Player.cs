@@ -1,5 +1,4 @@
-﻿using System;
-
+﻿
 namespace FifteenPuzzleGame
 {
     public class Player
