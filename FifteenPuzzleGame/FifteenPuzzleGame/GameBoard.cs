@@ -34,11 +34,11 @@ namespace FifteenPuzzleGame
             set { _board = value; }
         }
 
-        public GameBoard()
+        public GameBoard(int boardSize)
         {
             _randomNumber = new Random();
             _numberPool = new List<int>();
-            _boardSize = DEFAULT_BOARD_SIZE;          
+            _boardSize = boardSize;          
             do
             {
                 PopulateRandomNumberPool(); //this is required since PopulateAndRemove empties the list
