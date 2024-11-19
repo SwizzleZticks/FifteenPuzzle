@@ -38,7 +38,7 @@ namespace FifteenPuzzleGame
         {
             _randomNumber = new Random();
             _numberPool = new List<int>();
-            BoardSize = DEFAULT_BOARD_SIZE;          
+            _boardSize = DEFAULT_BOARD_SIZE;          
             do
             {
                 PopulateRandomNumberPool(); //this is required since PopulateAndRemove empties the list
