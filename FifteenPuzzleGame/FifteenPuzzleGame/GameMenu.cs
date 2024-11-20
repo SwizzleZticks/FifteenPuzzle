@@ -6,7 +6,7 @@ namespace FifteenPuzzleGame
     public class GameMenu : IMenuNavigation
     {
         private ConsoleKeyInfo _keyPress;
-        private string[] _menuOptions = [" > 8-Puzzle(Mini)", "15-Puzzle(Classic)", "24-Puzzle(Expanded)","35-Puzzle(Advanced)"];
+        private string[] _menuOptions = ["->  [8-Puzzle] - (Mini)", " [15-Puzzle] - (Classic)", " [24-Puzzle] - (Expanded)"," [35-Puzzle] - (Advanced)"];
 
         public int GetGameSize()
         {
@@ -23,8 +23,8 @@ namespace FifteenPuzzleGame
                 {
                     0 => 3,
                     1 => 4,
-                    2 => 6,
-                    3 => 8,
+                    2 => 5,
+                    3 => 6,
                     _ => 3
                 };
                
@@ -60,10 +60,22 @@ namespace FifteenPuzzleGame
         }
         private void DisplayMenu()
         {
+            PrintMenuHeader();
             foreach (var menuOption in _menuOptions)
             {
-                Console.WriteLine(menuOption);
+                ConsoleHelper.WriteLineCentered(menuOption + "\n");
+                //Console.WriteLine(menuOption + "\n");
             }
+        }
+
+        private void PrintMenuHeader()
+        {
+            ConsoleHelper.WriteLineCentered("********************");
+            ConsoleHelper.WriteLineCentered("*      [MENU]      *");
+            ConsoleHelper.WriteLineCentered("********************");
+            //Console.WriteLine("********************");
+            //Console.WriteLine("*      [MENU]      *");
+            //Console.WriteLine("********************");
         }
 
         public int GetSelectIndex()
@@ -83,7 +95,7 @@ namespace FifteenPuzzleGame
                 index--;
 
                 alteredIndexText = _menuOptions[index];
-                alteredIndexText = " > " + alteredIndexText;
+                alteredIndexText = "-> " + alteredIndexText;
                 _menuOptions[index] = alteredIndexText;             
             }
         }
@@ -100,7 +112,7 @@ namespace FifteenPuzzleGame
                 index++;
 
                 alteredIndexText = _menuOptions[index];
-                alteredIndexText = " > " + alteredIndexText;
+                alteredIndexText = "-> " + alteredIndexText;
                 _menuOptions[index] = alteredIndexText;
             }
         }
