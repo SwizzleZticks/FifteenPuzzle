@@ -10,29 +10,58 @@ namespace FifteenPuzzleGame
     {
         public void RenderBoard(GameBoard board)
         {
+            //steps
+            //get console width
+            //figure each cell width
+            //multiply the board size(number of cells per row) by each cell width, then add 1 for the border
+            //^^^ THIS TELLS US THE WIDTH OF THE BOARD ^^^^
+            //then subract console from our board width and divide by 2, this finds out padding left
+            //which then allows us to find the starting position of the cursor to start printing to console
+            //instead of printing straight to console, create an empty string, and append
+            //after we are done appending to the string, we can use our padding of empty spaces
+            //then we finally append our string build after the padded spaces to print that row
+            //then repeat this process based on the condition in the for loop
+
+            //***NOTE***
+            //we need to have a conditional since odd rows print differently than even
+            //this will just add a space to realign it if it is an even board size
+
+            int consoleWidth = Console.WindowWidth;
+            int cellWidth = 5;
+            int boardWidth = (board.BoardSize * cellWidth) + 1;
+            int padding = (consoleWidth - boardWidth) / 2;
+
             PrintBoardHeader(board.BoardSize);
-            Console.WriteLine(PrintColumns(board));
+            PrintColumns(board);
+
             for (int i = 0; i < board.BoardSize; i++)
             {
+                string row = "";
+                if (board.BoardSize % 2 == 0)
+                {
+                    row += " ";
+                }
+
                 for (int j = 0; j < board.BoardSize; j++)
                 {
                     if (board.Board[i, j] == 0)
                     {
-                        Console.Write("| ");
-                        Console.Write("   ");
+                        row += "|    ";
                     }
                     else
                     {
-                        Console.Write("| {0,2} ", board.Board[i, j].ToString("D2"));
+                        row += string.Format("|{0,3} ", board.Board[i, j].ToString("D2"));
                     }
                 }
-                Console.WriteLine("|");
-                Console.WriteLine(PrintColumns(board));
+                row += "|";
+                Console.WriteLine(new string(' ', padding) + row);
+                PrintColumns(board);
             }
+
             ConsoleHelper.WriteLineCentered("Movement Instructions:");
             ConsoleHelper.WriteLineCentered("Up, Right, Down, Left keys.");
         }
-
+        
         private void PrintBoardHeader(int boardSize)
         {
             if(boardSize == 3)
@@ -64,7 +93,7 @@ namespace FifteenPuzzleGame
             }
         }
 
-        private string PrintColumns(GameBoard board)
+        private void PrintColumns(GameBoard board)
         {
             string gridPattern = "+";
 
@@ -72,7 +101,7 @@ namespace FifteenPuzzleGame
             {
                 gridPattern += "----+";
             }
-            return gridPattern;
+            ConsoleHelper.WriteLineCentered(gridPattern);
         }
     }
 }
