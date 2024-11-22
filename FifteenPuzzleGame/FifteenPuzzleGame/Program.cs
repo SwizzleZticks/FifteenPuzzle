@@ -4,8 +4,13 @@
     {
         static void Main(string[] args)
         {
-            Game newGame = new Game();
-            newGame.Run();
+            do
+            {
+                Console.Clear();
+                Game newGame = new Game();
+                newGame.Run();
+                Console.ResetColor();
+            }while (Game.IsPlayingAgain());
         }
     }
 }
