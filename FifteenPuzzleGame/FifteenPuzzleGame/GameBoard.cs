@@ -16,8 +16,6 @@ namespace FifteenPuzzleGame
          * 3. For all other cases, the puzzle instance is not solvable.
          */
 
-        private const int DEFAULT_BOARD_SIZE = 3;
-
         private List<int> _numberPool;
         private Random _randomNumber;
         private int[,] _board;
@@ -26,7 +24,7 @@ namespace FifteenPuzzleGame
         public int BoardSize 
         {
             get { return _boardSize; } 
-            set { _boardSize = value >= 3 ? value : DEFAULT_BOARD_SIZE; }
+            set { _boardSize = value; }
         }
         public int[,] Board 
         {
