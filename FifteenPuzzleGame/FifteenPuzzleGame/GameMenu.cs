@@ -60,11 +60,11 @@ namespace FifteenPuzzleGame
         }
         private void DisplayMenu()
         {
+            Console.ForegroundColor = ConsoleColor.Green;
             PrintMenuHeader();
             foreach (var menuOption in _menuOptions)
             {
                 ConsoleHelper.WriteLineCentered(menuOption + "\n");
-                //Console.WriteLine(menuOption + "\n");
             }
         }
 
@@ -73,9 +73,6 @@ namespace FifteenPuzzleGame
             ConsoleHelper.WriteLineCentered("********************");
             ConsoleHelper.WriteLineCentered("*      [MENU]      *");
             ConsoleHelper.WriteLineCentered("********************");
-            //Console.WriteLine("********************");
-            //Console.WriteLine("*      [MENU]      *");
-            //Console.WriteLine("********************");
         }
 
         public int GetSelectIndex()

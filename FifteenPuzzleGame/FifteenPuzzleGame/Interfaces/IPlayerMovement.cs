@@ -8,9 +8,9 @@ namespace FifteenPuzzleGame.Interfaces
 {
     public interface IPlayerMovement
     {
-        int MoveUp(ConsoleKeyInfo keyPress);
-        int MoveDown(ConsoleKeyInfo keyPress);
-        int MoveLeft(ConsoleKeyInfo keyPress);
-        int MoveRight(ConsoleKeyInfo keyPress);
+        void MoveUp();
+        void MoveDown();
+        void MoveLeft();
+        void MoveRight();
     }
 }

@@ -4,23 +4,29 @@ namespace FifteenPuzzleGame
     public class Game
     {
         private GameBoard _board;
+        private GameMenu _menu;
+        private BoardRenderer _boardRenderer;
         private Player _player;
 
-        public GameBoard Board 
-        { 
-            get {  return _board; }
-            set { _board = value; }
-        }
-        public Player Player
-        { 
-            get { return _player; } 
-            set { Player = value; }
-        }
-
-        public Game(GameBoard board, Player player)
+        public Game()
         {
-            _board = board;
-            _player = player;
+            _boardRenderer = new BoardRenderer();
+            _menu = new GameMenu();
+            _board = new GameBoard(_menu.GetGameSize());
+            _player = new Player(_board);
+
+        }
+        public void Run()
+        {
+            Console.Title = "15-Puzzle Game";
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+
+            while (true)
+            {
+                Console.Clear();
+                _boardRenderer.RenderBoard(_board, _player);
+                _player.Move();
+            }
         }
     }
 }
