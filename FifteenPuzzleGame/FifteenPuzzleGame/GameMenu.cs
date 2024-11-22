@@ -60,7 +60,7 @@ namespace FifteenPuzzleGame
         }
         private void DisplayMenu()
         {
-            Console.ForegroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = ConsoleColor.Blue;
             PrintMenuHeader();
             foreach (var menuOption in _menuOptions)
             {
