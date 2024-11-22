@@ -8,7 +8,7 @@ namespace FifteenPuzzleGame
 {
     public class BoardRenderer
     {
-        public void RenderBoard(GameBoard board)
+        public void RenderBoard(GameBoard board, Player player)
         {
             //steps
             //get console width
@@ -32,6 +32,7 @@ namespace FifteenPuzzleGame
             int padding = (consoleWidth - boardWidth) / 2;
 
             PrintBoardHeader(board.BoardSize);
+            ConsoleHelper.WriteLineCentered($"Move Count: {player.MoveCount}");
             PrintColumns(board);
 
             for (int i = 0; i < board.BoardSize; i++)
