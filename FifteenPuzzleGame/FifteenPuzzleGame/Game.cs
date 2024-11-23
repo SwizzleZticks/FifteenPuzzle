@@ -1,5 +1,4 @@
-﻿
-namespace FifteenPuzzleGame
+﻿namespace FifteenPuzzleGame
 {
     public class Game
     {
@@ -14,7 +13,6 @@ namespace FifteenPuzzleGame
             _menu = new GameMenu();
             _gameBoard = new GameBoard(_menu.GetGameSize());
             _player = new Player(_gameBoard);
-
         }
         public void Run()
         {
@@ -28,8 +26,9 @@ namespace FifteenPuzzleGame
                 _player.Move();
             }
             Console.Clear();
-            _gameBoardRenderer.RenderBoard(_gameBoard,_player);
-            PrintComplete();       
+            Console.ForegroundColor= ConsoleColor.Green;
+            _gameBoardRenderer.RenderBoard(_gameBoard, _player);
+            PrintComplete();
         }
         public static bool IsPlayingAgain()
         {
@@ -48,10 +47,10 @@ namespace FifteenPuzzleGame
                 }
                 else if (userInput == "N")
                 {
-                    isPlaying= false;
+                    isPlaying = false;
                     isActiveLoop = false;
                 }
-            }while (isActiveLoop);
+            } while (isActiveLoop);
 
             return isPlaying;
         }
