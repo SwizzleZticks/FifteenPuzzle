@@ -10,7 +10,7 @@
                 Game newGame = new Game();
                 newGame.Run();
                 Console.ResetColor();
-            }while (Game.IsPlayingAgain());
+            } while (Game.IsPlayingAgain());
         }
     }
 }
