@@ -2,6 +2,11 @@
 
 A classic sliding puzzle game implemented as a C# console application.
 
+## Current State and What's Next
+Game is in a completed state and moving to a state of adding features.
+Will be adding profiles for players that records scores, and also a timer.
+Following that will be the leaderboard and a database.
+
 ## Table of Contents
 - [Introduction](#introduction)
 - [How to Play](#how-to-play)
@@ -52,7 +57,6 @@ Continue moving the tiles until they are arranged in ascending order from 1 to 1
 - .NET 8.0: The framework for building and running the console application.
 
 ## Future Implementations
-- User choice gameboard size
 - Moving to WPF, mobile, and web versions
 - Leaderboard, and personal stats
 
