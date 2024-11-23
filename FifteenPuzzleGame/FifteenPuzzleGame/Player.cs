@@ -5,34 +5,19 @@ namespace FifteenPuzzleGame
 {
     public class Player : IPlayerMovement
     {
-        private int _x;
-        private int _y;
-        private int _moveCount;
         private GameBoard _gameBoard;
         private ConsoleKeyInfo _keyPress;
 
-        public int X 
-        {
-            get { return _x; } 
-            set { _x = value; }
-        }
-        public int Y 
-        {
-            get { return _y; } 
-            set { _y = value; }
-        }
-
-        public int MoveCount
-        {
-            get { return _moveCount; }
-        }
+        public int X { get; set; }
+        public int Y { get; set; }
+        public int MoveCount { get; set; }
 
         public Player(GameBoard gameBoard)
         {
             _gameBoard = gameBoard;
-            _x = GetAxisLocation("x");
-            _y = GetAxisLocation("y");
-            _moveCount = 0;
+            X = GetAxisLocation("x");
+            Y = GetAxisLocation("y");
+            MoveCount = 0;
         }
 
         private int GetAxisLocation(string axis)
@@ -90,37 +75,37 @@ namespace FifteenPuzzleGame
 
         public void MoveUp()
         {
-            if(_x != 0)
+            if(X != 0)
             {
-                SwapTiles(_x, _y, _x - 1, _y);
-                _x--;
+                SwapTiles(X, Y, X - 1, Y);
+                X--;
             }
         }
 
         public void MoveDown()
         {
-            if (_x != _gameBoard.BoardSize - 1)
+            if (X != _gameBoard.BoardSize - 1)
             {
-                SwapTiles(_x, _y, _x + 1, _y);
-                _x++;
+                SwapTiles(X, Y, X + 1, Y);
+                X++;
             }
         }
 
         public void MoveLeft()
         {
-            if (_y != 0)
+            if (Y != 0)
             {
-                SwapTiles(_x, _y, _x, _y - 1);
-                _y--;
+                SwapTiles(X, Y, X, Y - 1);
+                Y--;
             }
         }
 
         public void MoveRight()
         {
-            if (_y != _gameBoard.BoardSize - 1)
+            if (Y != _gameBoard.BoardSize - 1)
             {
-                SwapTiles(_x, _y, _x, _y + 1);
-                _y++;
+                SwapTiles(X, Y, X, Y + 1);
+                Y++;
             }
         }
         private void SwapTiles(int currentX, int currentY, int zeroX, int zeroY)
@@ -128,7 +113,7 @@ namespace FifteenPuzzleGame
             int tempValueHolder = _gameBoard.Board[currentX, currentY];
             _gameBoard.Board[currentX, currentY] = _gameBoard.Board[zeroX, zeroY];
             _gameBoard.Board[zeroX, zeroY] = tempValueHolder;
-            _moveCount++;
+            MoveCount++;
         }
     }
 }
