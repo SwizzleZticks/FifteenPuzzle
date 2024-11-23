@@ -10,8 +10,6 @@ namespace FifteenPuzzleGame
             int textLength = text.Length;
             int startPositionX = (consoleWidth / 2) - (textLength / 2);
 
-            
-
             Console.SetCursorPosition(startPositionX, Console.CursorTop);
             Console.WriteLine(text);
         }
