@@ -16,7 +16,6 @@
         }
         public void Run()
         {
-            Console.Title = "15-Puzzle Game";
             Console.ForegroundColor = ConsoleColor.Blue;
 
             while (!IsCompletedPuzzle())
@@ -72,16 +71,16 @@
             {
                 for (int j = 0; j < _gameBoard.Board.GetLength(1); j++)
                 {
-                    if (i == _gameBoard.Board.GetLength(0) - 1 && j == _gameBoard.Board.GetLength(1) - 1)
+                    if (i == _gameBoard.Board.GetLength(0) - 1 && j == _gameBoard.Board.GetLength(1) - 1) //This checks last cell case for the player at the end of the board
                     {
-                        if (_gameBoard.Board[i, j] != 0)
+                        if (_gameBoard.Board[i, j] != 0) // if last cell doesnt equal 0 its false
                         {
                             return false;
                         }
                     }
                     else
                     {
-                        if (_gameBoard.Board[i, j] != count)
+                        if (_gameBoard.Board[i, j] != count) //this compares to the count checking each postion in the array for incremental match
                         {
                             return false;
                         }
@@ -89,7 +88,7 @@
                     }
                 }
             }
-            return true;
+            return true; // if the check makes it through every increment and the last spot is a 0(player positon) all checks passed and the board is solved
         }
     }
 }

@@ -4,6 +4,8 @@
     {
         static void Main(string[] args)
         {
+            Console.Title = "15-Puzzle Game";
+
             do
             {
                 Console.Clear();
