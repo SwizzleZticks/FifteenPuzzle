@@ -3,7 +3,7 @@
     public class Game
     {
         private GameBoard _gameBoard;
-        private GameMenu _menu;
+        private readonly GameMenu _menu;
         private BoardRenderer _gameBoardRenderer;
         private Player _player;
 
@@ -53,7 +53,7 @@
 
             return isPlaying;
         }
-        private void PrintComplete()
+        private static void PrintComplete()
         {
             ConsoleHelper.WriteLineCentered("*****************", ConsoleColor.Green);
             ConsoleHelper.WriteLineCentered("*  [COMPLETE!]  *", ConsoleColor.Green);
