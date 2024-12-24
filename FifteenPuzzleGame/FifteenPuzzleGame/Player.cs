@@ -5,7 +5,7 @@ namespace FifteenPuzzleGame
 {
     public class Player : IPlayerMovement
     {
-        private GameBoard _gameBoard;
+        private readonly GameBoard _gameBoard;
         private ConsoleKeyInfo _keyPress;
 
         public int X { get; set; }
@@ -110,9 +110,7 @@ namespace FifteenPuzzleGame
         }
         private void SwapTiles(int currentX, int currentY, int zeroX, int zeroY)
         {
-            int tempValueHolder = _gameBoard.Board[currentX, currentY];
-            _gameBoard.Board[currentX, currentY] = _gameBoard.Board[zeroX, zeroY];
-            _gameBoard.Board[zeroX, zeroY] = tempValueHolder;
+            (_gameBoard.Board[currentX, currentY], _gameBoard.Board[zeroX, zeroY]) = (_gameBoard.Board[zeroX, zeroY], _gameBoard.Board[currentX, currentY]);
             MoveCount++;
         }
     }
